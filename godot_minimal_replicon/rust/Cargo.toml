@@ -8,8 +8,11 @@ crate-type = ["cdylib"]
 
 [dependencies]
 bevy = { version = "0.16", default-features = false, features = ["bevy_state"] }
+bevy_replicon = "0.34.4" 
+bevy_replicon_renet = { git = "https://github.com/simgine/bevy_replicon_renet", version = "0.10.0" }
 godot = "0.3"
 godot-bevy = { version = "0.9.0", features = ["default"] }
+shared = { path = "../../shared" }
 
 [workspace]
 # Empty workspace table to make this a standalone project

@@ -1,6 +1,13 @@
 [package]
 name = "replicon_server"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
+
+shared = { path = "../shared" }
+clap = { version = "4.0", features = ["derive"] }
+bevy = { version = "0.16.1", default-features = false }
+bevy_replicon = "0.34.4"
+bevy_replicon_renet = { git = "https://github.com/simgine/bevy_replicon_renet", version = "0.10.0" }
+
