@@ -1,0 +1,34 @@
+# Godot
+.godot/
+*.tmp
+*.swp
+*.swo
+*~
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+# Godot 4 specific
+.godot/
+*.translation
+
+# Godot builds and exports
+android/
+builds/
+exports/
+*.apk
+*.aab
+*.zip
+*.dmg
+*.app
+*.x86_64
+*.x86
+*.pck
+
+# Build artifacts
+*.exe
+*.dll
+*.so
+*.dylib
