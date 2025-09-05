@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqhby7f587fe0"]
+
+[ext_resource type="Script" uid="uid://guo1kx7de5ss" path="res://addons/godot-bevy/wizard/project_wizard.gd" id="1"]
+
+[node name="ProjectWizard" type="ConfirmationDialog"]
+title = "Setup godot-bevy Project"
+initial_position = 2
+ok_button_text = "Create Project"
+script = ExtResource("1")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+
+[node name="Label" type="Label" parent="VBox"]
+text = "Configure your godot-bevy project:"
+
+[node name="HSeparator" type="HSeparator" parent="VBox"]
+
+[node name="ProjectName" type="HBoxContainer" parent="VBox"]
+
+[node name="Label" type="Label" parent="VBox/ProjectName"]
+custom_minimum_size = Vector2(120, 0)
+text = "Project Name:"
+
+[node name="LineEdit" type="LineEdit" parent="VBox/ProjectName"]
+size_flags_horizontal = 3
+text = "my_game"
+placeholder_text = "Enter project name..."
+
+[node name="Version" type="HBoxContainer" parent="VBox"]
+
+[node name="Label" type="Label" parent="VBox/Version"]
+custom_minimum_size = Vector2(120, 0)
+text = "godot-bevy Version:"
+
+[node name="LineEdit" type="LineEdit" parent="VBox/Version"]
+size_flags_horizontal = 3
+text = "0.9"
+placeholder_text = "e.g., 0.9"
+
+[node name="HSeparator2" type="HSeparator" parent="VBox"]
+
+[node name="ReleaseBuild" type="CheckBox" parent="VBox"]
+text = "Configure for release builds"
+
+[node name="HSeparator3" type="HSeparator" parent="VBox"]
+
+[node name="PluginNote" type="RichTextLabel" parent="VBox"]
+bbcode_enabled = true
+text = "[b]Note:[/b] This wizard creates a project with [i]GodotDefaultPlugins[/i] which includes all standard godot-bevy functionality.\n\nAfter generation, you can customize plugin selection in your lib.rs file."
+fit_content = true
+scroll_active = false
